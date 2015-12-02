@@ -1,12 +1,17 @@
 """ Solution to the second puzzle of Day 1 on adventofcode.com
 """
+import os
 
 def main():
     """ Determine when Santa entered the basement
     """
     floor = 0
     char_pos = 0
-    with open('santa_input', 'r') as input_file:
+
+    basedir = os.path.dirname(os.path.realpath(__file__))
+    file_path = os.path.join(basedir, 'santa_input')
+
+    with open(file_path, 'r') as input_file:
         while True:
             char_pos += 1
             char = input_file.read(1)

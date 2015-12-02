@@ -1,5 +1,6 @@
 """ Solution to the second puzzle of Day 2 on adventofcode.com
 """
+import os
 
 def calculate_ribbon_length(package):
     """ Determine the amount of ribbon required to wrap a given package
@@ -17,7 +18,11 @@ def main():
     """ Read in data from the elves and output the amount of ribbon they need.
     """
     ribbon_length = 0
-    with open('input', 'r') as input_file:
+
+    basedir = os.path.dirname(os.path.realpath(__file__))
+    file_path = os.path.join(basedir, 'input')
+
+    with open(file_path, 'r') as input_file:
         for line in input_file:
             ribbon_length += calculate_ribbon_length(line.strip())
 

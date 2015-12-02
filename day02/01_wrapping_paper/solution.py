@@ -1,5 +1,6 @@
 """ Solution to the first puzzle of Day 2 on adventofcode.com
 """
+import os
 
 def calculate_package_area(package):
     """ Determine the amount of wrapping paper required to wrap a given package
@@ -20,7 +21,11 @@ def main():
         paper they need.
     """
     paper_area = 0
-    with open('input', 'r') as input_file:
+
+    basedir = os.path.dirname(os.path.realpath(__file__))
+    file_path = os.path.join(basedir, 'input')
+
+    with open(file_path, 'r') as input_file:
         for line in input_file:
             paper_area += calculate_package_area(line.strip())
 
