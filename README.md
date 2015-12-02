@@ -1,2 +1,2 @@
 # AdventOfCode
-My solutions ot the puzzles at adventofcode.com
+My solutions to the puzzles at adventofcode.com
