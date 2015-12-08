@@ -58,7 +58,10 @@ def main():
             (operation, name) = line.split(' -> ')
             PARTS[name] = operation
 
-    print compute('a')
+    solution = compute('a')
+    print solution
+
+    assert solution == 3176
 
 
 if __name__ == '__main__':

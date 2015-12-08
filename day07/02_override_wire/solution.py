@@ -67,7 +67,10 @@ def main():
 
     PARTS['b'] = str(signal_a)
 
-    print compute('a')
+    solution = compute('a')
+    print solution
+
+    assert solution == 14710
 
 
 if __name__ == '__main__':
