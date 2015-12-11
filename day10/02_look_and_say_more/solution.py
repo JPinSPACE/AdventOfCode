@@ -26,5 +26,7 @@ def main():
 
     print len(puz_input)
 
+    assert len(puz_input) == 6989950
+
 if __name__ == '__main__':
     main()
